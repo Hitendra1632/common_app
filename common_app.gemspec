@@ -41,5 +41,4 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "minitest", "~> 5.0"
 
   spec.add_runtime_dependency 'rest-client'
-  spec.add_runtime_dependency 'savon', '~> 2.11.2'
 end

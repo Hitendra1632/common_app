@@ -14,7 +14,7 @@ module CommonApp
       private
 
       def applicant
-        response[:applicant_response][:applicant_result]
+        response[:get_applicant_response][:get_applicant_result]
       end
 
       def response

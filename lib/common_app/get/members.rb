@@ -8,7 +8,7 @@ module CommonApp
       private
 
       def members
-        response[:members_response][:members_result]
+        response[:get_members_response][:get_members_result]
       end
 
       def response
