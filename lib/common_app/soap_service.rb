@@ -23,7 +23,11 @@ module CommonApp
     end
 
     def options
-      { wsdl: CommonApp.configuration.soap_service, proxy: CommonApp.configuration.proxy, convert_request_keys_to: :none }
+      {
+        wsdl: CommonApp.configuration.soap_service,
+        proxy: CommonApp.configuration.proxy,
+        convert_request_keys_to: :none
+      }
     end
 
     def headers
