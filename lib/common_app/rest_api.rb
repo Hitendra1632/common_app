@@ -16,9 +16,7 @@ module CommonApp
     private
 
     def parse_response
-      return nil unless response.present?
-
-      JSON.parse(response)
+      JSON.parse(response) if response.present?
     end
 
     def response

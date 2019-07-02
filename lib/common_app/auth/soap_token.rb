@@ -2,7 +2,7 @@ module CommonApp
   module Auth
     class SoapToken < Base
       def token
-        response[:auth_response][:auth_result][:token]
+        response[:token]
       end
 
       def response

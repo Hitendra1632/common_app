@@ -9,13 +9,29 @@ module CommonApp
     end
 
     def call
-      response.body
+      operation_result
     end
 
     private
 
+    def operation_result
+      operation_response[operation_result_key] if operation_response
+    end
+
+    def operation_result_key
+      (operation.to_s + '_result').to_sym
+    end
+
+    def operation_response
+      response.body[operation_response_key]
+    end
+
+    def operation_response_key
+      (operation.to_s + '_response').to_sym
+    end
+
     def response
-      client.call(operation, message: message, headers: headers)
+      @response ||= client.call(operation, message: message, headers: headers)
     end
 
     def client

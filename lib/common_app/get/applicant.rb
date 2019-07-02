@@ -14,10 +14,6 @@ module CommonApp
       private
 
       def applicant
-        response[:get_applicant_response][:get_applicant_result]
-      end
-
-      def response
         SoapService.new(operation, message).call
       end
 
