@@ -8,6 +8,7 @@ require "common_app/version"
 require "common_app/auth/base"
 require "common_app/auth/rest_token"
 require "common_app/auth/soap_token"
+require "common_app/create/applicant"
 require "common_app/get/applicant"
 require "common_app/get/members"
 
