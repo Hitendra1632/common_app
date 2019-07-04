@@ -2,9 +2,9 @@ module CommonApp
   class RestApi
     attr_reader :method, :url, :params, :authorize
 
-    def initialize(method, endpoint, params = {}, authorize = true)
+    def initialize(api, method, endpoint, params = {}, authorize = true)
       @method = method
-      @url = CommonApp.configuration.rest_api + '/' + endpoint
+      @url = CommonApp.configuration.rest_api[api] + '/' + endpoint
       @params = params
       @authorize = authorize
     end
@@ -28,15 +28,19 @@ module CommonApp
     end
 
     def post
-      RestClient::Request.execute(method: :post, url: url, payload: params, headers: headers, proxy: proxy)
+      RestClient::Request.execute(method: :post, url: url, payload: payload, headers: headers, proxy: proxy)
     end
 
     def put
-      RestClient::Request.execute(method: :put, url: url, payload: params, headers: headers, proxy: proxy)
+      RestClient::Request.execute(method: :put, url: url, payload: payload, headers: headers, proxy: proxy)
     end
 
     def delete
       RestClient::Request.execute(method: :delete, url: url, headers: headers, proxy: proxy)
+    end
+
+    def payload
+      params.to_json
     end
 
     def headers

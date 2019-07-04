@@ -22,7 +22,7 @@ module CommonApp
       end
 
       def message
-        { email: email }
+        { Email: email }
       end
     end
   end

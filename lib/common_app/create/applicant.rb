@@ -14,7 +14,11 @@ module CommonApp
       private
 
       def response
-        RestApi.new(method, endpoint, params).call
+        RestApi.new(api, method, endpoint, params).call
+      end
+
+      def api
+        :create
       end
 
       def method

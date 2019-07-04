@@ -6,7 +6,11 @@ module CommonApp
       end
 
       def response
-        RestApi.new(method, endpoint, body, false).call
+        RestApi.new(api, method, endpoint, body, false).call
+      end
+
+      def api
+        :auth
       end
 
       def method
