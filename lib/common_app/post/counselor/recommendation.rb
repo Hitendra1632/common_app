@@ -1,26 +1,26 @@
 module Post
-	module Counselor
-		class Recommendation
-			attr_reader :params
+  module Counselor
+    # for sending Recommendation
+    class Recommendation
+      attr_reader :params
 
-			def initialize(params)
-				@params = params
-			end
+      def initialize(params)
+        @params = params
+      end
 
-			def call
+      def call
+        submitted_form
+      end
 
-			end
+      private
 
-			private
+      def submitted_form
+        SoapService.new(operation, params).call
+      end
 
-			def response
-				SoapService.new(operation, body, false).call
-			end
-
-			def operation
-				:post_form_counselor_recommendation
-			end
-
-		end
-	end
+      def operation
+        :post_form_counselor_recommendation
+      end
+    end
+  end
 end

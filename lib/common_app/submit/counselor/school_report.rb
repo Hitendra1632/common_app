@@ -1,21 +1,26 @@
 module Submit
-	module Counselor
-		class SchoolReport
-			attr_reader :params
+  module Counselor
+    # for submit School Report
+    class SchoolReport
+      attr_reader :params
 
-			def initialize(params)
-				@params = params
-			end
+      def initialize(params)
+        @params = params
+      end
 
-			def call
+      def call
+        submitted_form
+      end
 
-			end
+      private
 
-			private
+      def submitted_form
+        SoapService.new(operation, params).call
+      end
 
-			def operation
-				:submit_counselor_secondary_report
-			end
-		end
-	end
+      def operation
+        :post_form_teacher_recommendation
+      end
+    end
+  end
 end

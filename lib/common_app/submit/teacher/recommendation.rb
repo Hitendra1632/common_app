@@ -1,21 +1,26 @@
 module Submit
-	module Teacher
-		class Recommendation
-			attr_reader :params
+  module Teacher
+    # for submit Recommendation
+    class Recommendation
+      attr_reader :params
 
-			def initialize(params)
-				@params = params
-			end
+      def initialize(params)
+        @params = params
+      end
 
-			def call
+      def call
+        submitted_form
+      end
 
-			end
+      private
 
-			private
+      def submitted_form
+        SoapService.new(operation, params).call
+      end
 
-			def operation
-				:submit_teacher_recommendation
-			end
-		end
-	end
+      def operation
+        :submit_teacher_recommendation
+      end
+    end
+  end
 end
