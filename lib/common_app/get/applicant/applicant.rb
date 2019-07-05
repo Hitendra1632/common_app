@@ -1,28 +1,30 @@
 module CommonApp
   module Get
-    class Applicant
-      attr_reader :email
+    module Applicant
+      class Get
+        attr_reader :email
 
-      def initialize(email)
-        @email = email
-      end
+        def initialize(email)
+          @email = email
+        end
 
-      def call
-        applicant
-      end
+        def call
+          applicant
+        end
 
-      private
+        private
 
-      def applicant
-        SoapService.new(operation, message).call
-      end
+        def applicant
+          SoapService.new(operation, message).call
+        end
 
-      def operation
-        :get_applicant
-      end
+        def operation
+          :get_applicant
+        end
 
-      def message
-        { Email: email }
+        def message
+          { Email: email }
+        end
       end
     end
   end
