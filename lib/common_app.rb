@@ -1,5 +1,6 @@
 require 'rest-client'
 require 'savon'
+require 'require_all'
 
 require "common_app/configuration"
 require "common_app/rest_api"
@@ -11,6 +12,7 @@ require "common_app/auth/soap_token"
 require "common_app/create/applicant"
 require "common_app/get/applicant"
 require "common_app/get/members"
+require "common_app/post/counselor/secondary_report"
 
 module CommonApp
   class << self

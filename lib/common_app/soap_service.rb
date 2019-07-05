@@ -42,7 +42,8 @@ module CommonApp
       {
         wsdl: CommonApp.configuration.soap_service,
         proxy: CommonApp.configuration.proxy,
-        convert_request_keys_to: :none
+        convert_request_keys_to: :none,
+        unwrap: true
       }
     end
 
