@@ -1,23 +1,27 @@
 module CommonApp
-  module Get
-    module Counselor
-      class Base
+  module Invite
+    module Assign
+      class Teacher
         attr_reader :applicant_id, :recommender_id, :member_id
 
         def initialize(applicant_id, recommender_id, member_id)
-          @applicant_id =  applicant_id
+          @applicant_id = applicant_id
           @recommender_id = recommender_id
           @member_id = member_id
         end
 
         def call
-          status
+          assign
         end
 
-        protected
+        private
 
-        def status
+        def assign
           SoapService.new(operation, message).call
+        end
+
+        def operation
+          :assign_teacher
         end
 
         def message

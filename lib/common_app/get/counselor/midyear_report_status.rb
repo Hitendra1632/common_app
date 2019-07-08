@@ -2,7 +2,6 @@ module CommonApp
   module Get
     module Counselor
       class MidyearReportStatus < Base
-
         private
 
         def operation

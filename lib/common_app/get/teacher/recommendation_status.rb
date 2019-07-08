@@ -2,12 +2,12 @@ module CommonApp
   module Get
     module Teacher
       class RecommendationStatus
-        attr_reader :applicant_id, :member_id, :recommender_id
+        attr_reader :applicant_id, :recommender_id, :member_id
 
-        def initialize(applicant_id, member_id, recommender_id)
+        def initialize(applicant_id, recommender_id, member_id)
           @applicant_id =  applicant_id
-          @member_id = member_id
           @recommender_id = recommender_id
+          @member_id = member_id
         end
 
         def call
@@ -26,9 +26,9 @@ module CommonApp
 
         def message
           {
-              ApplicantId: applicant_id,
-              MemberId: member_id,
-              RecommenderId: recommender_id
+            ApplicantId: applicant_id,
+            RecommenderId: recommender_id,
+            MemberId: member_id
           }
         end
       end

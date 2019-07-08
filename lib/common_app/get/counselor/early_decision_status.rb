@@ -2,7 +2,6 @@ module CommonApp
   module Get
     module Counselor
       class EarlyDecisionStatus < Base
-
         private
 
         def operation

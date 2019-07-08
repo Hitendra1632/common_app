@@ -24,10 +24,7 @@ module CommonApp
         end
 
         def message
-          {
-              ApplicantId: applicant_id,
-              MemberId: member_id
-          }
+          { ApplicantId: applicant_id, MemberId: member_id }
         end
       end
     end

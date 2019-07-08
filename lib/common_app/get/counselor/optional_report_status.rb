@@ -2,8 +2,6 @@ module CommonApp
   module Get
     module Counselor
       class OptionalReportStatus < Base
-        attr_reader :applicant_id, :member_id, :recommender_id
-
         private
 
         def operation

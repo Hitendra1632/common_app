@@ -1,8 +1,7 @@
 module CommonApp
   module Get
     module Members
-      class Deadline
-
+      class Deadlines
         def call
           deadlines
         end

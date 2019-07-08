@@ -1,25 +1,25 @@
 module CommonApp
   module Get
     module Applicant
-      class Detail
+      class AuthorizationStatus
         attr_reader :applicant_id
 
         def initialize(applicant_id)
-          @applicant_id =  applicant_id
+          @applicant_id = applicant_id
         end
 
         def call
-          detail
+          authorization_status
         end
 
         private
 
-        def detail
+        def authorization_status
           SoapService.new(operation, message).call
         end
 
         def operation
-          :get_applicant_detail
+          :get_form_applicant_authorization_status
         end
 
         def message
