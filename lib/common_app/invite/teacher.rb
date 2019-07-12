@@ -27,10 +27,10 @@ module CommonApp
         {
           ApplicantId: applicant_id,
           Email: teacher[:email],
-          Title: teacher[:title],
           FirstName: teacher[:first_name],
           LastName: teacher[:last_name],
-          Subject: subject
+          Subject: subject,
+          Title: teacher[:title]
         }
       end
     end
