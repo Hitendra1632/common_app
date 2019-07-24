@@ -27,8 +27,8 @@ module CommonApp
         def message
           {
             ApplicantId: applicant_id,
-            RecommenderId: recommender_id,
-            MemberId: member_id
+            MemberId: member_id,
+            RecommenderId: recommender_id
           }
         end
       end

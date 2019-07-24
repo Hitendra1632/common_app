@@ -26,9 +26,9 @@ module CommonApp
         {
           ApplicantId: applicant_id,
           Email: counselor[:email],
-          Title: counselor[:title],
           FirstName: counselor[:first_name],
-          LastName: counselor[:last_name]
+          LastName: counselor[:last_name],
+          Title: counselor[:title]
         }
       end
     end
