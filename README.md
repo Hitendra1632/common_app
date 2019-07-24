@@ -17,6 +17,8 @@ And then execute:
 
 ## Configuration
 
+Create a file with a name common_app.rb in `config/initializers`
+
 Add these lines to `config/initializers/common_app.rb`:
 
 ```ruby
@@ -33,7 +35,122 @@ end
 
 ## Usage
 
-TODO: Write usage instructions here
+##  Table of Contents
+
+1. Auth
+    Rest Token
+    Soap Token
+
+1. Create
+    Applicant
+2. Get    
+    Applicant
+        Application Status
+        Authorization Status
+        Details
+        Get
+    Counselor
+        ED2 Status
+        ED Status
+        FeeWavier Status
+        Final Report Status
+        Get
+        Midyear Report Status
+        Optional Report Status
+        Recommendation Status
+        Secondary Report Status
+        Status
+    Members
+        Deadlines
+        List
+    Teacher
+        RecommendationStatus
+    SecondarySchools
+3. Invite
+    Assign
+      Remove Teacher
+      Teacher
+    Counselor
+    RemoveCounselor
+    RemoveTeacher
+    Teacher
+    
+4. Post 
+    Counselor
+        ED
+        ED2
+        Fee Waiver
+        Final Report
+        Midyear Report
+        Optional Report
+        Recommendation
+        Secondary Report
+    Teacher
+        Recommendation 
+5. Submit
+    Counselor
+        ED
+        ED2
+        Fee Waiver
+        Final Report
+        Midyear Report
+        Optional Report
+        Recommendation
+        School Report
+    Teacher 
+        Recommendation
+
+    
+    
+
+
+
+  
+Create Applicant
+
+```
+params  = {
+            "address" : {
+          
+              "addressline1" : "Address line 1",
+          
+              "addressline2" : "Address line 1",
+          
+              "addressline3" : "Address line 1",
+          
+              "city" : "City name",
+          
+              "country" : "Country name",
+          
+              "state" : "State name",
+          
+              "zip" : "123456"
+          
+            },
+            "birthdate" : "03/21/2000",
+          
+            "email" : "test@example.com",
+          
+            "firstname" : "Example",
+          
+            "lastname" : "Last Name",
+          
+            "phone" : {
+          
+              "countrycode" : "+65",
+          
+              "number" : "123456789"
+          
+            }
+          }
+
+
+CommonApp::Create::Applicant.new(params).call
+
+```
+
+Get Methods
+    
 
 ## Development
 
@@ -43,7 +160,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/common_app. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/Hitendra1632/common_app. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 

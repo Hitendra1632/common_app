@@ -1,8 +1,8 @@
 module CommonApp
-  module Submit
+  module Post
     module Counselor
-      # for submit School Report
-      class SchoolReport
+      # for sending Mid year Report
+      class MidyearReport
         attr_reader :params
 
         def initialize(params)
@@ -20,9 +20,9 @@ module CommonApp
         end
 
         def operation
-          :post_form_teacher_recommendation
+          :post_form_counselor_midyear_report
         end
       end
     end
-  end
+  end  
 end
