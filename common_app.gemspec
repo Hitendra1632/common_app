@@ -40,5 +40,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "minitest", "~> 5.0"
 
   spec.add_runtime_dependency 'rest-client'
-	spec.add_runtime_dependency 'require_all'
+	spec.add_runtime_dependency 'require_all', "->  1.4.0"
 end
