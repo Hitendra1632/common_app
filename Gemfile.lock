@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    common_app (0.1.0)
+    common_app (0.1.2)
       require_all
       rest-client
 
