@@ -2,9 +2,7 @@ module CommonApp
   module Auth
     class Base
       def call
-        cache.fetch(key, options) do
-          token
-        end
+        cache ? cache.fetch(key, options) { token } : token
       end
 
       private
