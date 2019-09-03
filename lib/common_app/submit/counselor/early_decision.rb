@@ -26,8 +26,3 @@ module CommonApp
     end
   end
 end
-
-CommonApp::Submit::Counselor::EarlyDecision.new(params).call
-params = {
-
-}

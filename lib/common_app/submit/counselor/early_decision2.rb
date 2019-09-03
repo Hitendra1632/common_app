@@ -24,5 +24,5 @@ module CommonApp
         end
       end
     end
-  end  
+  end
 end

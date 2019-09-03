@@ -20,7 +20,7 @@ module CommonApp
         end
 
         def operation
-          :submit_teacher_recommendation
+          :submit_teacher_common_te
         end
       end
     end

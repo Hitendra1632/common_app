@@ -20,9 +20,9 @@ module CommonApp
         end
 
         def operation
-          :submit_counselor_optional_report
+          :submit_counselor_common_or
         end
       end
     end
-  end  
+  end
 end

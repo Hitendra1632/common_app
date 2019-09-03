@@ -20,7 +20,7 @@ module CommonApp
         end
 
         def operation
-          :post_form_teacher_recommendation
+          :submit_counselor_common_sr
         end
       end
     end

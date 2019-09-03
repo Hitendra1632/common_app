@@ -20,9 +20,9 @@ module CommonApp
         end
 
         def operation
-          :submit_counselor_midyear_report
+          :submit_counselor_common_mr
         end
       end
     end
-  end  
+  end
 end

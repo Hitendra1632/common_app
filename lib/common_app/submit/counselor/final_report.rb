@@ -20,9 +20,9 @@ module CommonApp
         end
 
         def operation
-          :submit_counselor_final_report
+          :submit_counselor_common_fw
         end
       end
     end
-  end  
+  end
 end
