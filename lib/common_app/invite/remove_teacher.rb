@@ -19,11 +19,11 @@ module CommonApp
 			end
 
 			def operation
-				:invite_counselor_remove
+				:invite_teacher_remove
 			end
 
 			def message
-				{ApplicantId: applicant_id, RecommenderId: recommender_id}
+				{ ApplicantId: applicant_id, RecommenderId: recommender_id }
 			end
 		end
 	end
