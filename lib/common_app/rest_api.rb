@@ -2,9 +2,9 @@ module CommonApp
   class RestApi
     attr_reader :method, :url, :params, :authorize
 
-    def initialize(api, method, endpoint, params = {}, authorize = true)
+    def initialize(method, endpoint, params = {}, authorize = true)
       @method = method
-      @url = CommonApp.configuration.rest_api[api] + '/' + endpoint
+      @url = CommonApp.configuration.rest_api + '/' + endpoint
       @params = params
       @authorize = authorize
     end
