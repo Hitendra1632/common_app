@@ -15,7 +15,7 @@ module CommonApp
         private
 
         def details
-          RestApi.new(method, endpoint, params).call
+          RestApi.new(method, endpoint).call
         end
 
         def method
