@@ -23,7 +23,7 @@ module CommonApp
         end
 
         def endpoint
-          "applicant/#{ applicant_id }"
+          "applicant/#{ applicant_id }/details"
         end
       end
     end
