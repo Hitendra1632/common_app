@@ -2,7 +2,7 @@ module CommonApp
   module Submit
     module Counselor
       # for submit Recommendation
-      class Recommendation
+      class Recommendation < Base
         def endpoint
           "counselor/submit/recommendation"
         end
