@@ -1,8 +1,7 @@
 module CommonApp
   module Post
     module Counselor
-      # for sending Recommendation
-      class Recommendation
+      class Profile
         attr_reader :params
 
         def initialize(params)
@@ -20,7 +19,7 @@ module CommonApp
         end
 
         def endpoint
-          "counselor/recommendation"
+          "counselor/profile"
         end
 
         def post
