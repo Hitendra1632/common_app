@@ -4,7 +4,7 @@ module CommonApp
       # for sending FinalReport
       class FinalReport < Base
         def endpoint
-          "counselor/final-report"
+          "recommender/counselor/final-report"
         end
       end
     end

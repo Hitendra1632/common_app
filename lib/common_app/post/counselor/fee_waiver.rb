@@ -4,7 +4,7 @@ module CommonApp
       # for sending Fee Waiver
       class FeeWaiver < Base
         def endpoint
-          "counselor/fee-waiver"
+          "recommender/counselor/fee-waiver"
         end
       end
     end

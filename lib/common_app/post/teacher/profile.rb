@@ -11,7 +11,7 @@ module CommonApp
         private
 
         def endpoint
-          "teacher/profile"
+          "recommender/teacher/profile"
         end
 
         def post

@@ -4,7 +4,7 @@ module CommonApp
       # for sending  Optional Report
       class OptionalReport < Base
         def endpoint
-          "counselor/optional-report"
+          "recommender/counselor/optional-report"
         end
       end
     end
