@@ -1,12 +1,10 @@
 module CommonApp
   module Post
     class Base
-      attr_reader :params, :recommender_id, :applicant_id
+      attr_reader :params
 
-      def initialize(recommender_id, applicant_id, params)
-        @params         = params
-        @recommender_id = recommender_id
-        @applicant_id   = applicant_id
+      def initialize(params)
+        @params = params
       end
 
       def call
@@ -18,7 +16,7 @@ module CommonApp
       end
 
       def post
-        RestApi.new(method, endpoint, params.merge(applicantId: applicant_id, recommenderId: recommender_id)).call
+        RestApi.new(method, endpoint, params).call
       end
     end
   end
