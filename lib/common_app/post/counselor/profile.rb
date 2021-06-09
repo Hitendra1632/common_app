@@ -10,7 +10,7 @@ module CommonApp
         end
 
         def endpoint
-          "counselor/profile"
+          "recommender/counselor/profile"
         end
 
         def post

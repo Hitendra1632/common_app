@@ -4,7 +4,7 @@ module CommonApp
       # for sending Recommendation
       class Recommendation < Base
         def endpoint
-          "counselor/recommendation"
+          "recommender/counselor/recommendation"
         end
       end
     end

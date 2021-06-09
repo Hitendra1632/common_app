@@ -4,7 +4,7 @@ module CommonApp
       # for sending SecondaryReport
       class SecondaryReport < Base
         def endpoint
-          "counselor/secondary-report"
+          "recommender/counselor/secondary-report"
         end
       end
     end
