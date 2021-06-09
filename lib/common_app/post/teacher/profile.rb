@@ -1,16 +1,17 @@
 module CommonApp
   module Post
-    module Counselor
+    module Teacher
+      # for sending Teacher Profile
       class Profile < Base
-        attr_reader :params
-
         def initialize(recommender_id, params)
           @params = params
           @recommender_id = recommender_id
         end
 
+        private
+
         def endpoint
-          "counselor/profile"
+          "teacher/profile"
         end
 
         def post
