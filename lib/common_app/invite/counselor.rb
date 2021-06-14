@@ -20,7 +20,7 @@ module CommonApp
 
       def params
         {
-          applicant_id: applicant_id,
+          applicantId: applicant_id,
           email: counselor[:email],
           firstName: counselor[:first_name],
           lastName: counselor[:last_name],
@@ -33,7 +33,7 @@ module CommonApp
       end
 
       def endpoint
-        "counselor/invite"
+        "recommender/counselor/invite"
       end
     end
   end

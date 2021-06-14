@@ -21,7 +21,7 @@ module CommonApp
 
       def params
         {
-          applicant_id: applicant_id,
+          applicantId: applicant_id,
           email: teacher[:email],
           firstName: teacher[:first_name],
           lastName: teacher[:last_name],
@@ -35,7 +35,7 @@ module CommonApp
       end
 
       def endpoint
-        "teacher/invite"
+        "recommender/teacher/invite"
       end
     end
   end
