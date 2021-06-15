@@ -4,7 +4,7 @@ module CommonApp
       # for submit School Report
       class SchoolReport < Base
         def endpoint
-          "counselor/submit/secondary-report"
+          "recommender/counselor/submit/secondary-report"
         end
       end
     end

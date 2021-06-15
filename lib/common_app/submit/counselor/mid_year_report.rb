@@ -4,7 +4,7 @@ module CommonApp
       # for submit MidYearReport
       class MidYearReport < Base
         def endpoint
-          "counselor/submit/midyear-report"
+          "recommender/counselor/submit/midyear-report"
         end
       end
     end

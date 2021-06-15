@@ -1,11 +1,10 @@
 module CommonApp
   module Submit
     class Base
-      attr_reader :recommender_id, :applicant_id
+      attr_reader :params
 
-      def initialize(recommender_id, applicant_id)
-        @recommender_id = recommender_id
-        @applicant_id   = applicant_id
+      def initialize(params)
+        @params = params
       end
 
       def call
@@ -14,13 +13,6 @@ module CommonApp
 
       def method
         'post'
-      end
-
-      def params
-        {
-          applicantId: applicant_id,
-          recommenderId: recommender_id
-        }
       end
 
       def submit
