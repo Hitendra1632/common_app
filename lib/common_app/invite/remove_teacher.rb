@@ -23,7 +23,7 @@ module CommonApp
       end
 
       def endpoint
-        "teacher/invite/#{applicant_id}/#{recommender_id}"
+        "recommender/teacher/invite/#{applicant_id}/#{recommender_id}"
       end
 		end
 	end

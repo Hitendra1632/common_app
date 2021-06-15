@@ -17,14 +17,18 @@ module CommonApp
         private
 
         def assign
-          SoapService.new(operation, message).call
+          RestApi.new(method, endpoint, params).call
         end
 
-        def operation
-          :assign_teacher
+        def method
+          'post'
         end
 
-        def message
+        def endpoint
+          "recommender/counselor/invite"
+        end
+
+        def params
           {
             ApplicantId: applicant_id,
             MemberId: member_id,
