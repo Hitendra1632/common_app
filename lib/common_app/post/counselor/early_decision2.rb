@@ -4,7 +4,7 @@ module CommonApp
       # for sending early decision2
       class EarlyDecision2 < Base
         def endpoint
-          "recommender/counselor/eary-decision2"
+          "recommender/counselor/early-decision2"
         end
       end
     end
