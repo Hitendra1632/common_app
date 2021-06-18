@@ -17,7 +17,7 @@ module CommonApp
         private
 
         def remove
-          RestApi.new(method, endpoint, params).call
+          RestApi.new(method, endpoint).call
         end
 
         def method
