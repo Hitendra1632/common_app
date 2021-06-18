@@ -25,14 +25,14 @@ module CommonApp
         end
 
         def endpoint
-          "recommender/counselor/invite"
+          "recommender/teacher/assign"
         end
 
         def params
           {
-            ApplicantId: applicant_id,
-            MemberId: member_id,
-            RecommenderId: recommender_id
+            applicantId: applicant_id,
+            memberId: member_id,
+            recommenderId: recommender_id
           }
         end
       end
