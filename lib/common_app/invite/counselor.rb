@@ -15,21 +15,25 @@ module CommonApp
       private
 
       def invite
-        SoapService.new(operation, message).call
+        RestApi.new(method, endpoint, params).call
       end
 
-      def operation
-        :invite_counselor
-      end
-
-      def message
+      def params
         {
-          ApplicantId: applicant_id,
-          Email: counselor[:email],
-          FirstName: counselor[:first_name],
-          LastName: counselor[:last_name],
-          Title: counselor[:title]
+          applicantId: applicant_id,
+          email: counselor[:email],
+          firstName: counselor[:first_name],
+          lastName: counselor[:last_name],
+          title: counselor[:title]
         }
+      end
+
+      def method
+        'post'
+      end
+
+      def endpoint
+        "recommender/counselor/invite"
       end
     end
   end
