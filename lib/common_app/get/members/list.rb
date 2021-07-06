@@ -9,11 +9,15 @@ module CommonApp
         private
 
         def members
-          SoapService.new(operation).call
+          RestApi.new(method, endpoint).call
         end
 
-        def operation
-          :get_members
+        def method
+          'get'
+        end
+
+        def endpoint
+          "datacatalog/colleges"
         end
       end
     end
