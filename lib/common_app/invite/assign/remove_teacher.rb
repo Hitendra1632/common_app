@@ -17,19 +17,15 @@ module CommonApp
         private
 
         def remove
-          SoapService.new(operation, message).call
+          RestApi.new(method, endpoint).call
         end
 
-        def operation
-          :assign_teacher_remove
+        def method
+          'delete'
         end
 
-        def message
-          {
-            ApplicantId: applicant_id,
-            MemberId: member_id,
-            RecommenderId: recommender_id
-          }
+        def endpoint
+          "recommender/teacher/assign/#{applicant_id}/#{recommender_id}/#{member_id}"
         end
       end
     end

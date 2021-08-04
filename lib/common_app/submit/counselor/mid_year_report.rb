@@ -2,25 +2,9 @@ module CommonApp
   module Submit
     module Counselor
       # for submit MidYearReport
-      class MidYearReport
-        attr_reader :params
-
-        def initialize(params)
-          @params = params
-        end
-
-        def call
-          submitted_form
-        end
-
-        private
-
-        def submitted_form
-          SoapService.new(operation, params).call
-        end
-
-        def operation
-          :submit_counselor_common_mr
+      class MidYearReport < Base
+        def endpoint
+          "recommender/counselor/submit/midyear-report"
         end
       end
     end

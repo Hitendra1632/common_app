@@ -11,9 +11,25 @@ module CommonApp
 
     def call
       parse_response
+    rescue RestClient::ExceptionWithResponse => e
+      if e.http_code == 500
+        raise CommonApp::ServerError
+      else
+        { error_code: e.http_code, response: get_exception(e) }
+      end
     end
 
     private
+
+    def get_exception(e)
+      if e.try(:response).present?
+       JSON.parse(e.response)
+      elsif e.present?
+        e['Message'] || {}
+      else
+        {}
+      end
+    end
 
     def parse_response
       JSON.parse(response) if response.present?

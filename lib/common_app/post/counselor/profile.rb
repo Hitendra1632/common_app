@@ -1,10 +1,9 @@
 module CommonApp
   module Post
     module Counselor
-      # for sending Fee Waiver
-      class FeeWaiver < Base
+      class Profile < Base
         def endpoint
-          "recommender/counselor/fee-waiver"
+          "recommender/counselor/profile"
         end
       end
     end
