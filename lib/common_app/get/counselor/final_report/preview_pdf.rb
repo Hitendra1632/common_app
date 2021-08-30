@@ -4,7 +4,7 @@ module CommonApp
       module FinalReport
         class PreviewPdf < Base
           def endpoint
-            "recommender/counselor/#{params[:recommender_id]}/#{params[:applicant_id]}/#{params[:member_id]}/final-report/submitted-pdf"
+            "recommender/counselor/#{params[:recommender_id]}/#{params[:applicant_id]}/final-report/preview-pdf"
           end
         end
       end
