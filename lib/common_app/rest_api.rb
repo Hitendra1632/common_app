@@ -52,11 +52,11 @@ module CommonApp
     end
 
     def delete
-      RestClient::Request.execute(method: :delete, url: url, headers: headers, proxy: proxy)
+      RestClient::Request.execute(method: :delete, url: url, payload: payload, headers: headers, proxy: proxy)
     end
 
     def payload
-      params.to_json
+      params.present? ? params.to_json : nil
     end
 
     def headers
