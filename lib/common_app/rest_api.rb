@@ -40,19 +40,19 @@ module CommonApp
     end
 
     def get
-      RestClient::Request.execute(method: :get, url: url, headers: headers, proxy: proxy)
+      RestClient::Request.execute(method: :get, url: url, headers: headers)
     end
 
     def post
-      RestClient::Request.execute(method: :post, url: url, payload: payload, headers: headers, proxy: proxy)
+      RestClient::Request.execute(method: :post, url: url, payload: payload, headers: headers)
     end
 
     def put
-      RestClient::Request.execute(method: :put, url: url, payload: payload, headers: headers, proxy: proxy)
+      RestClient::Request.execute(method: :put, url: url, payload: payload, headers: headers)
     end
 
     def delete
-      RestClient::Request.execute(method: :delete, url: url, payload: payload, headers: headers, proxy: proxy)
+      RestClient::Request.execute(method: :delete, url: url, payload: payload, headers: headers)
     end
 
     def payload
