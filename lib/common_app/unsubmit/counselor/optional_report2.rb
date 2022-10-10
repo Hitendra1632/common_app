@@ -1,7 +1,7 @@
 module CommonApp
   module Unsubmit
     module Counselor
-      # to unsubmit OptionalReport
+      # to unsubmit OptionalReport 2
       class OptionalReport < Base
         def endpoint
           "recommender/counselor/submit/optional-report-2"
