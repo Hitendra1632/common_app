@@ -1,5 +1,5 @@
 module CommonApp
-  module Unsubmit
+  module SubmittedPdf
     class Base
       attr_reader :params
 
