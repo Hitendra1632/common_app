@@ -55,6 +55,10 @@ module CommonApp
       RestClient::Request.execute(method: :delete, url: url, payload: payload, headers: headers)
     end
 
+    def patch
+      RestClient::Request.execute(method: :patch, url: url, payload: payload, headers: headers)
+    end
+
     def payload
       params.present? ? params.to_json : nil
     end
