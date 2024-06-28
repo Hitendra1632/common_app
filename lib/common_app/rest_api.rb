@@ -32,13 +32,7 @@ module CommonApp
     end
 
     def parse_response
-      return if response.blank?
-
-      begin
-        JSON.parse(response)
-      rescue JSON::ParserError
-        response
-      end
+      JSON.parse(response) if response.present?
     end
 
     def response
