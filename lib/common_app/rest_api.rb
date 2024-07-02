@@ -32,7 +32,13 @@ module CommonApp
     end
 
     def parse_response
-      JSON.parse(response) if response.present?
+      return if response.blank?
+
+      begin
+        JSON.parse(response)
+      rescue JSON::ParserError
+        response
+      end
     end
 
     def response
@@ -53,6 +59,10 @@ module CommonApp
 
     def delete
       RestClient::Request.execute(method: :delete, url: url, payload: payload, headers: headers)
+    end
+
+    def patch
+      RestClient::Request.execute(method: :patch, url: url, payload: payload, headers: headers)
     end
 
     def payload
