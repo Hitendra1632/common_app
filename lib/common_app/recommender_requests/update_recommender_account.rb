@@ -16,7 +16,15 @@ module CommonApp
       private
 
       def update_recommender_account_profile
-        RestApi.new(method, endpoint, params).call
+        parse_response(RestApi.new(method, endpoint, params).call)
+      end
+
+      def parse_response(response)
+        begin
+          response.deep_transform_keys { |key| key.to_s.underscore }
+        rescue JSON::ParserError
+          response.body.gsub(/["\\]/, '')
+        end
       end
 
       def method
