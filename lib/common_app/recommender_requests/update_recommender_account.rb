@@ -22,7 +22,7 @@ module CommonApp
       def parse_response(response)
         begin
           response.deep_transform_keys { |key| key.to_s.underscore }
-        rescue JSON::ParserError
+        rescue NoMethodError
           response.body.gsub(/["\\]/, '')
         end
       end
